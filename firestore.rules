@@ -1,0 +1,46 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // --- COLEÇÃO: configuracoes ---
+    // Configurações de cores, logo, WhatsApp, slogan, endereço, impressora e estilos gerais.
+    match /configuracoes/{configId} {
+      allow read, write: if true;
+    }
+
+    // --- COLEÇÃO: produtos ---
+    // Pratos e itens do cardápio.
+    match /produtos/{produtoId} {
+      allow read, write: if true;
+    }
+
+    // --- COLEÇÃO: categorias ---
+    // Categorias dos pratos (ex: Marmitas, Doces, Bebidas, etc).
+    match /categorias/{categoriaId} {
+      allow read, write: if true;
+    }
+
+    // --- COLEÇÃO: acompanhamentos ---
+    // Opções extras para personalizar as refeições.
+    match /acompanhamentos/{acompanhamentoId} {
+      allow read, write: if true;
+    }
+
+    // --- COLEÇÃO: galerias ---
+    // Galerias de fotos dos produtos.
+    match /galerias/{galeriaId} {
+      allow read, write: if true;
+    }
+
+    // --- COLEÇÃO: pedidos ---
+    // Pedidos enviados pelos clientes e gerenciados pelo administrador.
+    match /pedidos/{pedidoId} {
+      allow read, write: if true;
+    }
+
+    // --- REGRA GERAL DE SEGURANÇA ---
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}

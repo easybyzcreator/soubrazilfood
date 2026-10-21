@@ -1,0 +1,22 @@
+{
+  "name": "Sou Brazil",
+  "short_name": "Sou Brazil",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#865d39",
+  "icons": [
+    {
+      "src": "https://i.ibb.co/5XY0BDRS/Whats-App-Image-2026-10-06-at-7-33-45-AM.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "https://i.ibb.co/5XY0BDRS/Whats-App-Image-2026-10-06-at-7-33-45-AM.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}
